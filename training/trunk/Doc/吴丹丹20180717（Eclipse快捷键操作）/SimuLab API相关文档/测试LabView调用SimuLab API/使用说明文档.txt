@@ -1,0 +1,11 @@
+SimuLab目前提供的接口是工程编译之后的操作的接口,编译之前的相关操作目前没有相关接口；
+使用步骤：
+1、将以上4个文件复制至SimuLab 3.0安装目录（如：E:\Simulab\v3.0\extern\example\LabView\GeneralMonitor_1）下；
+2、双击工程文件直接打开工程；
+3、菜单栏：工具->导入->共享库;
+   >> 若没有vi则选择 创建；否则选择更新vi
+   >> 下一步里面选择dll文件和h文件..下一步(dll文件和h文件的路径为SimuLab的安装目录下如：E:\Simulab\v3.0\extern\api)
+   >> 在设置库名称的地方输入：SimuLabAPIEx_V3.lvlib
+   >> 在错误处理模式里面选择 简易错误处理
+   >> 下一步直到完成。
+4、点击运行即可运行LabView版本的监控；
