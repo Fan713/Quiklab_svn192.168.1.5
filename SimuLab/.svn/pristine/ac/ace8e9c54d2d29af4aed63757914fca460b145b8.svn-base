@@ -1,0 +1,5 @@
+[Interface]
+;模型配置文件路径
+mainFileDir = C:\SimuLab\v3.0\ui\workspace\test123\main.slm
+ 
+[Ui]
