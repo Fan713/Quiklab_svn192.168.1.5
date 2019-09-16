@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//case/uiCase/tcpIpSmoke.py=GB18030
+encoding//casebase/TCP_Component.py=GB18030
+encoding//casebase/auto_lib.py=GB18030
+encoding//casebase/case_wrapper.py=GB18030
+encoding//casebase/checkName.py=GB18030
+encoding//casebase/exception.py=GB18030
+encoding//casebase/getLatestRev.py=GB18030
+encoding//casebase/getReg.py=GB18030
+encoding//casebase/get_usage.py=GB18030
+encoding//casebase/init.py=GB18030
+encoding//casebase/locFun.py=GB18030
+encoding//casebase/lxmlReaderModify.py=utf-8
+encoding//casebase/require.py=GB18030
+encoding//casebase/sshProtocol.py=GB18030
+encoding/allcase.py=GB18030
+encoding/startTest.py=GB18030

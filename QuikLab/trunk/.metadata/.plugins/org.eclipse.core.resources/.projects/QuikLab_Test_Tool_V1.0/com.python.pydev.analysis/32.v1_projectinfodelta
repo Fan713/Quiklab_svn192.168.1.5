@@ -1,0 +1,14 @@
+INSTUPcasebase.case_wrapper
+E:\³ÌÁú\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\casebase\case_wrapper.py
+INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0&&2|8|2|0&&2|9|2|0&&2|10|2|0&&3|1|2|0&&3|11|2|0
+app=1
+creat_pro=4
+load_pro=5
+unload_pro=6
+window_name=11
+add_tar=9
+add_dev=8
+casebase.case_wrapper=2
+login=3
+add_Bus=7
+close=10

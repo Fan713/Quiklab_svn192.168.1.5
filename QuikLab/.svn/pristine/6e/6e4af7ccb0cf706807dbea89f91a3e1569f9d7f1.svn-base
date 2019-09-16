@@ -1,0 +1,172 @@
+#! /usr/bin/env python
+#coding=GB18030
+from pywinauto import application
+from pywinauto import mouse as ms
+import auto_lib as pywin 
+import SendKeys
+import time
+import os
+app=pywin.Pywin()
+
+def login(tl_dir,tl_name,key):
+    app.start(tl_dir,tl_name)
+#     window_name =u'登录--试验自动测试管理系统'
+#     app.connect(window_name)
+# #    controller="Edit1"
+#     #  app.pr(window_name)
+#     app.Sendk('TAB', 1)
+#     time.sleep(2)
+#     app.input(window_name,'Edit1', key)
+#     app.click(window_name, 'Button4')
+
+    
+    
+def creat_pro(window_name,pro_name):
+    app.click(window_name,'Button1')
+    app.Sendk('TAB', 3)
+    app.input(window_name,'Edit1',pro_name)
+    app.click(window_name,'Button5') #确定
+    SendKeys.SendKeys('{1}')
+    
+def load_pro(window_name,pro_name):
+    app.click(window_name,'Button2')
+    time.sleep(1)
+    app.input(window_name,'Edit1',pro_name)
+    app.Sendk('TAB', 2)
+    app.click(window_name,'Button10')#点击确定
+        
+def unload_pro(window_name):
+    app.click(window_name,'Button3')
+    time.sleep(1)
+    app.click(window_name,'Button2')
+
+#添加总线
+def add_Bus(window_name):
+    app.click(window_name,'TreeItem10') #进入环境配置 
+    ms.right_click(coords=(1577, 492))
+    app.Sendk('DOWN', 1)
+    app.Sendk('ENTER',1) 
+    app.click(window_name, 'COmboBox1')
+    app.input(window_name, 'ComboBox1', 'tcp')#添加 TCP/IP协议
+    app.Sendk('ENTER',1)
+    app.click(window_name, 'Button5') #确定
+
+#添加设备  
+def add_dev(window_name):
+    app.right_click(window_name,'Pane2')
+    app.Sendk('DOWN', 3)
+    app.Sendk('ENTER',1) #选择添加设备
+
+#添加目标机
+def add_tar(window_name):
+    app.click(window_name, 'ComboBox1')
+    app.Sendk('UP', 1)
+    app.Sendk('ENTER', 1)
+    app.click(window_name, 'Edit2')
+    app.Sendk('RIGHT', 1)
+
+#添加IP
+    app.input(window_name, 'Edit2', '192')
+  #  app.Sendk('.', 1)
+    app.input(window_name, 'Edit3', '168')
+  #  app.Sendk('.', 1)
+    app.input(window_name, 'Edit4', '1')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit5', '5')
+    app.click(window_name, 'Button5')#确定
+    
+#添加客户端接口
+def add_Client_Interface(window_name):
+    app.click(window_name, 'ComboBox1')
+    app.Sendk('DOWN', 1)
+    app.Sendk('ENTER', 1)
+#添加IP
+    app.click(window_name, 'Edit9')
+    app.Sendk('RIGHT', 1)
+    app.input(window_name, 'Edit9', '192')
+#    app.Sendk('.', 1)
+    app.input(window_name, 'Edit10', '168')
+#   app.Sendk('.', 1)
+    app.input(window_name, 'Edit11', '1')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit12', '5')
+#设置端口
+    app.click(window_name, 'Edit13')
+    app.Sendk('BACKSPACE', 1)
+    app.input(window_name, 'Edit13', '6060')
+    app.click(window_name, 'Button7')#确定
+    
+#添加服务端接口
+def add_Service_Interface(window_name):
+    ms.right_click(coords=(923,510))
+    app.Sendk('DOWN', 2)
+    app.Sendk('ENTER', 1)
+    app.click(window_name, 'ComboBox1')
+    app.Sendk('DOWN', 2)
+    app.Sendk('ENTER', 1)
+    app.click(window_name, 'Button7')#确定
+    
+#添加信号
+def add_Signal(window_name):
+    ms.press(button='left', coords=(902, 456))
+    ms.move(coords=(940, 456))
+    ms.release(button='left', coords=(940, 456))
+    app.click(window_name, 'ComboBox5')
+    app.input(window_name, 'ComboBox5', 'i_block')#添加数据结构
+    app.click(window_name, 'Button11')#确定
+
+#新建测试用例
+def add_Case(window_name):
+#     app.click(window_name, 'TreeItem11')
+#     app.right_click(window_name, 'TreeView2')
+#     app.Sendk('DOWN', 2)
+#     app.Sendk('ENTER',1)
+    app.click(window_name, 'Button4')
+#     app.right_click(window_name,'TreeItem16') #测试用例root
+#     time.sleep(1)
+#     app.Sendk('DOWN',4)
+#     app.Sendk('ENTER',1)
+#     app.Sendk('TAB',2)
+#     app.input(window_name, 'Edit1', 'content2')#输入用例名
+#     app.click(window_name,'Button4') #确定
+#     app.click(window_name,'TreeItem16')
+#     app.Sendk('RIGHT',1)
+#     app.Sendk('DOWN',1)
+# 
+# #添加信号
+#     app.click(window_name, 'TabItem2')
+#     app.click(window_name, 'Button16')
+#     app.click(window_name, 'Table1')
+#     ms.click(coords=(602,450))#复选信号
+#     app.click(window_name, 'Button14')#确定
+# 
+# #测试用例编辑    
+#     app.click(window_name, 'TabItem1')
+#     app.right_click(window_name, 'TreeItem16')
+#     app.Sendk('UP', 1)
+#     app.Sendk('ENTER', 1)
+#     ms.press(button='left',coords=(600,229))
+#     ms.move(coords=(661, 646))
+#     ms.release(button='left', coords=(661, 646))
+#     app.click(window_name, 'Button10')
+
+if __name__== '__main__':
+    tl_dir = r'D:\QuiKLab3.0'
+    tl_name = r'D:\QuiKLab3.0\MainApp.exe'   
+while True: 
+    login(tl_dir,tl_name,'1')
+            
+    time.sleep(2)
+    window_name =u'QuiKLab V3.0'
+    
+#     app.connect(window_name)    
+#     creat_pro(window_name,'name12345678')
+#     unload_pro(window_name)
+#     load_pro(window_name, 'name12345678')
+#     add_Bus(window_name)
+#     add_dev(window_name)
+#     add_tar(window_name)
+#     add_Client_Interface(window_name)
+#     add_Service_Interface(window_name)
+#     add_Signal(window_name)
+#     add_Case(window_name)

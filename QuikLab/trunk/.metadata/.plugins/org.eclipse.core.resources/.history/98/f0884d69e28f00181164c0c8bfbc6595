@@ -1,0 +1,109 @@
+#! /usr/bin/env python
+#coding=GB18030
+from pywinauto import application
+from pywinauto import mouse as ms
+import auto_lib as pywin 
+import SendKeys
+import time
+import os
+app=pywin.Pywin()
+
+def login(tl_dir,tl_name,key):
+    app.start(tl_dir,tl_name)
+    window_name =u'登录--试验自动测试管理系统'
+    app.connect(window_name)
+#    controller="Edit1"
+    #  app.pr(window_name)
+    app.Sendk('TAB', 1)
+#     time.sleep(2)
+    app.input(window_name,'Edit1', key)
+    app.click(window_name, 'Button4')
+#判断QuikLab3.0是否弹出    
+    window_name =u'QuiKLab V3.0'
+    app._wait(window_name,'active',10, 2)
+    app.connect(window_name)
+
+    
+#新建工程
+def creat_pro(window_name,pro_name):
+    app.click(window_name,'Button1')
+    app.Sendk('TAB', 3)
+    app.input(window_name,'Edit1',pro_name)
+    app.click(window_name,'Button5') #确定
+    SendKeys.SendKeys('{1}')
+    
+def load_pro(window_name,pro_name):
+    app.click(window_name,'Button2')
+    time.sleep(1)
+    app.input(window_name,'Edit1',pro_name)
+    app.Sendk('TAB', 2)
+    app.click(window_name,'Button10')#点击确定
+    time.sleep(2)
+#判断工程是否加载成功
+    if 'name' in app.texts(window_name, 'statics2'):
+         pass
+    else:
+        print "pro failed to load!!!"
+        exit()
+
+        
+def unload_pro(window_name):
+    app.click(window_name,'Button3')
+    time.sleep(1)
+    app.click(window_name,'Button2')
+    if len(app.texts(window_name, 'statics2')) == 0:
+        print 'unload failed!!!'
+        exit()
+
+#添加总线
+def add_Bus(window_name):
+    app.click(window_name,'TreeItem10') #进入环境配置 
+    ms.right_click(coords=(1577, 492))
+    app.Sendk('DOWN', 1)
+    app.Sendk('ENTER',1) 
+    app._wait_child(window_name, u'添加总线', 'ready', 10, 2)
+    app.click(window_name, 'ComboBox1')
+    app.input(window_name, 'ComboBox1', 'tcp')#添加 TCP/IP协议
+    app.Sendk('ENTER',1)
+    app.click(window_name, 'Button5') #确定
+
+#添加设备  
+def add_dev(window_name):
+    app.right_click(window_name,'Pane2')
+    app.Sendk('DOWN', 3)
+    app.Sendk('ENTER',1) #选择添加设备
+
+#添加目标机
+def add_tar(window_name):
+    app.click(window_name, 'ComboBox1')
+    app.Sendk('UP', 1)
+    app.Sendk('ENTER', 1)
+    app.click(window_name, 'Edit2')
+    app.Sendk('RIGHT', 1)
+
+#添加IP
+    app.input(window_name, 'Edit2', '192')
+  #  app.Sendk('.', 1)
+    app.input(window_name, 'Edit3', '168')
+  #  app.Sendk('.', 1)
+    app.input(window_name, 'Edit4', '1')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit5', '5')
+    app.click(window_name, 'Button5')#确定
+    
+
+    
+def close(window_name,contorl):
+    app.click(window_name,contorl)
+    app.click(window_name,u"确定")
+
+if __name__=='__main__':
+    app=pywin.Pywin()
+    window_name =u'QuiKLab V3.0'
+    app.connect(window_name)
+#     load_pro(window_name, 'name12345')
+#     print app.texts(window_name,'statics2')
+#     load_pro(window_name, 'name1234')
+    add_Bus(window_name)
+    
+    

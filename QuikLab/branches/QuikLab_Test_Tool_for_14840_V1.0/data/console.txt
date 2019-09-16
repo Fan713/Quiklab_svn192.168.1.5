@@ -1,0 +1,12 @@
+15597
+Copying Installer...
+已复制         1 个文件。
+success read case list
+[<class 'case.tcpIpSmoke.Test'>]
+已复制         1 个文件。
+成功: 已终止进程 "MainApp.exe"，其 PID 为 2928。
+.
+Time Elapsed: 0:07:37.259000
+MainApp.exe is not exist
+Performance Test Pass
+进程2928已经结束

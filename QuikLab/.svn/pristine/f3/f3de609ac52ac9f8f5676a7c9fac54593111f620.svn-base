@@ -1,0 +1,10 @@
+INSTUPtests.overlapping
+D:\Python27-32\Lib\site-packages\pywinauto\tests\overlapping.py
+INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&1|6|2|0&&2|7|2|0
+tests.overlapping=2
+_Overlapped=5
+OptRect=6
+_ContainedInOther=4
+_OverlapRect=7
+testname=1
+OverlappingTest=3

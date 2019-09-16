@@ -1,0 +1,13 @@
+INSTUPcasebase.TCP_Component
+E:\³ÌÁú\Auto_QuikLab\QuikLab\branches\QuikLab_Test_Tool_for_14840_V1.0\casebase\TCP_Component.py
+INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0&&2|8|2|0&&2|9|2|0&&3|1|2|0&&3|10|2|0
+app=1
+get_pos=3
+add_TCP_Signal=6
+add_TCP_Case=7
+compareRes=9
+casebase.TCP_Component=2
+window_name=10
+run_case=8
+add_TCP_Service_Interface=5
+add_TCP_Client_Interface=4

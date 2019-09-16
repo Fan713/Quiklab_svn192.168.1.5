@@ -1,0 +1,251 @@
+#! /usr/bin/env python
+#coding=GB18030
+from pywinauto import application
+import pywinauto.base_wrapper as ba
+import SendKeys
+import time
+import os
+import pywinauto.mouse as mouse
+class Pywin(object):
+    def __init__(self):
+        self.app = application.Application(backend='uia')
+    def start(self,tl_dir,tl_name):
+        os.chdir(tl_dir)
+        self.app.start(tl_name)
+    def connect(self, window_name):
+        self.app.connect(title = window_name)
+        time.sleep(1)
+    def pr(self, window_name):
+        self.app[window_name].print_control_identifiers()
+    def close(self, window_name):
+        self.app[window_name].Close()
+        time.sleep(1)
+    def max_window(self, window_name):
+        self.app[window_name].Maximize()
+        time.sleep(1)
+    def menu_click(self, window_name, menulist):
+        self.app[window_name].MenuSelect(menulist)
+        time.sleep(1)
+    def input(self, window_name, controller, content):
+        self.app[window_name][controller].type_keys(content)
+        time.sleep(1)
+    def click(self, window_name, controller):
+        self.app[window_name][controller].click_input()
+        time.sleep(1)
+    def right_click(self, window_name, controller):
+        self.app[window_name][controller].right_click_input()
+    def double_click(self, window_name, controller, x ,y):
+        self.app[window_name][controller].double_click_input(button = "left",coords = (x, y))
+        time.sleep(1)
+    def focus(self,window_name,controller):
+        self.app[window_name][controller].set_focus()
+    def drag(self,window_name,controller,dx,dy,sx,sy):
+        self.app[window_name][controller].drag_mouse_input(dst=(dx,dy),src=(sx,sy),button='left',pressed='',absolute=True)
+    def Sendk(self,key_name,times):
+        SendKeys.SendKeys('{%s %d}'%(key_name,times))
+        
+if __name__ ==  "__main__":
+    app=Pywin()
+# #     tl_dir = r'D:\Program Files\QuiKLab3.0'
+# #     tl_name = r'D:\Program Files\QuiKLab3.0\MainApp.exe'
+# 
+#  #   app.start(tl_dir,tl_name)
+#    # time.sleep(2)
+#  #   window_name =u'登录--试验自动测试管理系统'
+    window_name = r'QuiKLab V3.0'
+    time.sleep(2)
+#    # window_name = u'图形监控'
+    dlg=app.connect(window_name)
+  #  time.sleep(2)
+  # controller="Button17"
+
+    #app.focus(window_name, controller)
+   # app.Sendk('TAB')
+   # time.sleep(2)
+   # app.input(window_name,controller,123)
+#    # 
+#     app.click(window_name,'CheckBox')
+#     
+#     app.pr(window_name)
+#     
+    app=application.Application(backend='uia')
+    window_name = r'QuiKLab V3.0'
+    app.connect(title = window_name)
+#     print "11111"
+#     app[window_name]['Button10'].click_input()
+#     app[window_name][u'确定'].click_input()
+#     app[window_name]['ComBox1'].select(1)
+   
+#     app[window_name].Maximize()
+    print app[window_name]['statics2'].texts()
+#     if 'name' in app[window_name]['statics2'].texts()[0]:
+#         print "get"
+
+
+#     app.click(window_name, 'Edit8')
+   # test=ctr.UIAWrapper()
+#     test = ba.BaseWrapper()
+#     test.get_properties()
+#     print "finish!!!!"
+#     time.sleep(100000)
+#     app.right_click(window_name, 'TreeView2')
+#     app.Sendk('DOWN', 2)
+#     app.Sendk('ENTER',1)
+#     app.click(window_name, 'Button4')
+#     app.right_click(window_name,'TreeItem16') #测试用例root
+#     time.sleep(1)
+#     app.Sendk('DOWN',4)
+#     app.Sendk('ENTER',1)
+'''
+#添加总线
+    app.click(window_name,'TreeItem10') #进入环境配置 
+    mouse.right_click(coords=(1577, 492))
+    app.Sendk('DOWN', 1)
+    app.Sendk('ENTER',1) 
+    app.click(window_name, 'COmboBox1')
+    app.input(window_name, 'ComboBox1', 'tcp')#添加 TCP/IP协议
+    app.Sendk('ENTER',1)
+    app.click(window_name, 'Button5') #确定
+
+
+#添加设备
+    app.right_click(window_name,'Pane2')
+    app.Sendk('DOWN', 3)
+    app.Sendk('ENTER',1) #选择添加设备
+#添加目标机
+    app.click(window_name, 'ComboBox1')
+    app.Sendk('UP', 1)
+    app.Sendk('ENTER', 1)
+
+#添加IP
+    app.click(window_name, 'Edit2')
+    app.Sendk('RIGHT', 1)
+    app.input(window_name, 'Edit2', '192')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit3', '168')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit4', '1')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit5', '5')
+    app.click(window_name, 'Button5')#确定
+    
+#添加客户端接口
+    app.click(window_name, 'ComboBox1')
+    app.Sendk('DOWN', 1)
+    app.Sendk('ENTER', 1)
+#添加IP
+    app.click(window_name, 'Edit9')
+    app.Sendk('RIGHT', 1)
+    app.input(window_name, 'Edit9', '192')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit10', '168')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit11', '1')
+    app.Sendk('.', 1)
+    app.input(window_name, 'Edit12', '5')
+#设置端口
+    app.click(window_name, 'Edit13')
+    app.Sendk('BACKSPACE', 1)
+    app.input(window_name, 'Edit13', '6060')
+    app.click(window_name, 'Button7')#确定
+ 
+ 
+ 
+ #添加服务端接口
+    pywinauto.mouse.right_click(coords=(923,510))
+    app.Sendk('DOWN', 2)
+    app.Sendk('ENTER', 1)
+    app.click(window_name, 'ComboBox1')
+    app.Sendk('DOWN', 2)
+    app.Sendk('ENTER', 1)
+    app.click(window_name, 'Button7')#确定
+    
+#添加信号
+    pywinauto.mouse.press(button='left', coords=(902, 456))
+    pywinauto.mouse.move(coords=(940, 456))
+    pywinauto.mouse.release(button='left', coords=(940, 456))
+    app.click(window_name, 'ComboBox5')
+    app.input(window_name, 'ComboBox5', 'i_block')#添加数据结构
+    app.click(window_name, 'Button11')#确定
+
+
+
+#新建测试用例
+    app.click(window_name, 'TreeItem11')
+    app.right_click(window_name, 'TreeView2')
+    app.Sendk('DOWN', 2)
+    app.Sendk('ENTER',1)
+    app.click(window_name, 'Button4')
+    app.right_click(window_name,'TreeItem16') #测试用例root
+    time.sleep(1)
+    app.Sendk('DOWN',4)
+    app.Sendk('ENTER',1)
+    app.Sendk('TAB',2)
+    app.input(window_name, 'Edit1', 'content2')#输入用例名
+    app.click(window_name,'Button4') #确定
+    app.click(window_name,'TreeItem16')
+    app.Sendk('RIGHT',1)
+    app.Sendk('DOWN',1)
+
+#添加信号
+    app.click(window_name, 'TabItem2')
+    app.click(window_name, 'Button16')
+    app.click(window_name, 'Table1')
+    pywinauto.mouse.click(coords=(602,450))#复选信号
+    app.click(window_name, 'Button14')#确定
+
+#测试用例编辑
+    app.click(window_name, 'TabItem1')
+    app.right_click(window_name, 'TreeItem16')
+    app.Sendk('UP', 1)
+    app.Sendk('ENTER', 1)
+    pywinauto.mouse.press(button='left',coords=(600,229))
+    pywinauto.mouse.move(coords=(661, 646))
+    pywinauto.mouse.release(button='left', coords=(661, 646))
+    app.click(window_name, 'Button10')
+
+
+
+#添加UUT
+    app.right_click(window_name,'Pane2')
+    app.click(window_name, 'ComboBox1')
+    app.Sendk('UP', 1)
+    app.Sendk('DOWN', 1)
+    app.Sendk('ENTER', 1)
+    app.click(window_name, 'Button5')
+
+
+ #   app.click(window_name,'TreeItem12') #测试用例
+#    SendKeys.SendKeys('{LEFT}')
+ #   app.right_click(window_name, 'TreeItem16')
+#    SendKeys.SendKeys('{DOWN}')
+#    app.Sendk('ENTER',1)
+
+
+
+
+    app.click(window_name, 'TabItem5')#图形监控
+    controller='Button4'
+    app.drag(window_name, controller, 810, 484, 1298, 406)#发送按钮控件
+    app.drag(window_name, controller, 849, 280, 1302, 307)#发送旋钮控件
+
+
+
+
+
+ 
+
+    window_name = 'QuiKLab V3.0'
+    app.connect(window_name)   
+    app.click(window_name, "TabItem1") #测试用例编辑
+   # app.click(window_name, "TabItem2") #测试用例变量
+#    app.double_click(window_name, 'Pane0',10,10)    
+#    app.drag(window_name,'Pane0',960,540,960,300)
+    app.drag(window_name,'Pane0',960,300,960,540)
+'''
+    
+    
+    
+    
+    
+        

@@ -1,0 +1,10 @@
+INSTUPtests.__init__
+D:\Python27-32\Lib\site-packages\pywinauto\tests\__init__.py
+INFOS:&&2|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&3|6|2|0&&2|7|2|0
+run_tests=1
+write_bugs=4
+tests.__init__=2
+_registered=6
+__init_tests=7
+get_bug_as_string=3
+print_bugs=5

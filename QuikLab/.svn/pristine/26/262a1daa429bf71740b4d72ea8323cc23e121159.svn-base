@@ -1,0 +1,41 @@
+[QuikLab]
+softWindowName = QuiKLab
+softUserName = default
+softPwd = 1
+softProjectName = cl_pro1
+connectMode = 数据库
+
+
+;config.xml中连接模式本地文件
+interfaceUseDatabaseLocalFile = 0
+
+;config.xml中连接模式数据库
+interfaceUseDatabaseSql = 1
+
+;连接模式远程文件
+interfaceUseDatabaseRemoteFile = 2
+
+;数据库或者本地文件模式时的IP地址
+interfaceHostnameIPAddress = 192.168.1.226
+
+;数据库端口
+interfacePort = 3306
+
+;数据库名称
+interfaceDbname = mydb
+
+;数据库的用户名
+interfaceUsername = root
+
+;数据库密码
+interfacePassword = root
+
+;测试服务器IP地址
+interfaceMainTargetIP = 192.168.1.222
+
+;测试服务器端口
+interfaceMainTargetPort = 8090
+
+ 
+ 
+[SimuLab]

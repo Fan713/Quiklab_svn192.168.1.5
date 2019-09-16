@@ -1,0 +1,10 @@
+INSTUPtests.repeatedhotkey
+D:\Python27-32\Lib\site-packages\pywinauto\tests\repeatedhotkey.py
+INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0
+_SetAsString=6
+tests.repeatedhotkey=2
+RepeatedHotkeyTest=3
+GetHotkey=5
+testname=1
+_CollectDialogInfo=4
+ImplementsHotkey=7

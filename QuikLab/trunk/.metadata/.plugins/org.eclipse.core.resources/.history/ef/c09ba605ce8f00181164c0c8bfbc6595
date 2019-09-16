@@ -1,0 +1,9 @@
+#! /usr/bin/env python
+#coding=GB18030
+from pywinauto import application
+from pywinauto import mouse as ms
+import auto_lib as pywin 
+import SendKeys
+import time
+import os
+app=pywin.Pywin()

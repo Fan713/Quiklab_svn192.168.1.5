@@ -1,0 +1,22 @@
+[QuikLab]
+;下位机IP
+TargetIp = 192.168.1.221
+;Sql数据库地址
+SqlIpAddr = 192.168.1.226
+SqlAccount = root
+SqlPw = root
+LoadPro = cl_test1
+;测试用例的分类名
+ExCaseClass = 用例分类
+;需执行的用例名称
+ExCase = 1234
+;执行测试用例生成日志的名称
+startCase = 20190124
+;测试计划的类名
+ExTaskClass = 11
+;测试任务名称
+ExTask = 22
+;执行测试任务生成日志的名称
+startTask = Task_20190124
+ 
+[SimuLab]

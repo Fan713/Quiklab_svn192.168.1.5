@@ -1,0 +1,59 @@
+-- VERSION_4
+-- START DISKCACHE_2
+E:\程龙\Auto_QuikLab\QuikLab\trunk\.metadata\.plugins\org.eclipse.core.resources\.projects\QuikLab_Test_Tool_V1.0\com.python.pydev.analysis\v2_indexcache
+casebase.__init__|1532495676402575000|E:\程龙\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\casebase\__init__.py
+casebase.TCP_Component|1532511757224346000|E:\程龙\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\casebase\TCP_Component.py
+casebase.auto_lib|1532506566003425000|E:\程龙\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\casebase\auto_lib.py
+case.__init__|1532484110957069000|E:\程龙\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\case\__init__.py
+casebase.case_wrapper|1532508571675143000|E:\程龙\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\casebase\case_wrapper.py
+report.__init__|1532484219630285000|E:\程龙\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\report\__init__.py
+case.tcpIpSmoke|1532499116831356000|E:\程龙\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\case\tcpIpSmoke.py
+data.__init__|1532484196573966000|E:\程龙\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\data\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+7
+5=Pywin
+1=casebase.TCP_Component
+3=casebase.auto_lib
+7=Test
+2=casebase.case_wrapper
+4=case.tcpIpSmoke
+6=Pywin.__init__
+-- END DICTIONARY
+-- START TREE 1
+11
+add|7|add_TCP_Signal!10@add_TCP_Case!10@add_tar!18@add_TCP_Service_Interface!10@add_TCP_Client_Interface!10@add_Bus!18@add_dev!18@
+app|3|app!11@app!19@app!27@
+clo|1|close!18@
+cre|1|creat_pro!18@
+loa|1|load_pro!18@
+log|1|login!18@
+pyw|1|Pywin!25@
+tes|1|Test!33@
+tl_|2|tl_name!27@tl_dir!27@
+unl|1|unload_pro!18@
+win|3|window_name!27@window_name!11@window_name!19@
+-- END TREE
+-- START TREE 2
+20
+__i|1|__init__!5&26@
+_wa|4|_wait_not_child!5&26@_wait!5&26@_wait_child!5&26@_wait_not!5&26@
+app|1|app!6&27@
+cli|1|click!5&26@
+clo|1|close!5&26@
+con|1|connect!5&26@
+dou|1|double_click!5&26@
+dra|1|drag!5&26@
+foc|1|focus!5&26@
+inp|1|input!5&26@
+max|1|max_window!5&26@
+men|1|menu_click!5&26@
+pr|1|pr!5&26@
+rig|1|right_click!5&26@
+sen|1|Sendk!5&26@
+set|1|setUp!7&34@
+sta|1|start!5&26@
+tea|1|tearDown!7&34@
+tes|1|testName!7&34@
+tex|1|texts!5&26@
+-- END TREE

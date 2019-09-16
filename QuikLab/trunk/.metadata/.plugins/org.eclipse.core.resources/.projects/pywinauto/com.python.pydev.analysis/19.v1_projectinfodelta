@@ -1,0 +1,9 @@
+INSTUPtests.missingextrastring
+D:\Python27-32\Lib\site-packages\pywinauto\tests\missingextrastring.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0&&2|5|2|0&&2|6|2|0
+tests.missingextrastring=2
+CharsToCheck=4
+_unittests=6
+__revision__=1
+testname=3
+MissingExtraStringTest=5

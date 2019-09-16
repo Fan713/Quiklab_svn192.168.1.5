@@ -1,0 +1,36 @@
+15907
+Copying Installer...
+已复制         1 个文件。
+['192', '168', '1', '5']
+success read case list
+[<class 'case.uiCase.tcpIpSmoke.Test'>]
+find user
+Init finish!
+_checkInstall
+PC181797-QuiKLab-V3.0.0.15907.tmp is not exist
+Install Successfully!
+confDataBase
+E:\程龙\Auto_QuikLab\QuikLab\branches\QuikLab_Test_Tool_for_14840_V1.0
+.EEE成功: 已终止进程 "MainApp.exe"，其 PID 为 5412。
+******************** E:\鲁脤脕煤\Auto_QuikLab\QuikLab\branches\QuikLab_Test_Tool_for_14840_V1.0\report\result20181102144545/20181102_144726.png
+******************** E:\鲁脤脕煤\Auto_QuikLab\QuikLab\branches\QuikLab_Test_Tool_for_14840_V1.0\report\result20181102144545/20181102_144734.png
+******************** E:\鲁脤脕煤\Auto_QuikLab\QuikLab\branches\QuikLab_Test_Tool_for_14840_V1.0\report\result20181102144545/20181102_144746.png
+
+Time Elapsed: 0:02:01.781000
+进程5412已经结束
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "D:\python27-32\lib\threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "D:\python27-32\lib\threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "E:\程龙\Auto_QuikLab\QuikLab\branches\QuikLab_Test_Tool_for_14840_V1.0\casebase\get_usage.py", line 152, in get_usage
+    df.to_excel('./usage.xls')
+  File "D:\python27-32\lib\site-packages\pandas\core\frame.py", line 1766, in to_excel
+    engine=engine)
+  File "D:\python27-32\lib\site-packages\pandas\io\formats\excel.py", line 646, in write
+    writer = ExcelWriter(_stringify_path(writer), engine=engine)
+  File "D:\python27-32\lib\site-packages\pandas\io\excel.py", line 1448, in __init__
+    import xlwt
+ImportError: No module named xlwt
+

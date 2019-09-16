@@ -1,0 +1,10 @@
+INSTUPcasebase.TCP_Component
+E:\³ÌÁú\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\casebase\TCP_Component.py
+INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&3|1|2|0&&3|7|2|0
+app=1
+add_TCP_Signal=5
+add_TCP_Case=6
+casebase.TCP_Component=2
+window_name=7
+add_TCP_Service_Interface=4
+add_TCP_Client_Interface=3

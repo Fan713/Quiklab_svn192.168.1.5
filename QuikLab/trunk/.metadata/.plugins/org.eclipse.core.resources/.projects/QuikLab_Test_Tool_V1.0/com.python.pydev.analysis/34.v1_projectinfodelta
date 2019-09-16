@@ -1,0 +1,8 @@
+INSTUPcase.tcpIpSmoke
+E:\³ÌÁú\Auto_QuikLab\QuikLab\trunk\QuikLab_Test_Tool_V1.0\case\tcpIpSmoke.py
+INFOS:&&1|1|2|0&&2|3|2|1&&2|4|2|1&&2|5|2|1
+Test=1
+setUp=3
+tearDown=4
+case.tcpIpSmoke=2
+testName=5

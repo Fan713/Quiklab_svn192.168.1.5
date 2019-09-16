@@ -1,0 +1,8 @@
+INSTUPtests.leadtrailspaces
+D:\Python27-32\Lib\site-packages\pywinauto\tests\leadtrailspaces.py
+INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0
+LeadTrailSpacesTest=3
+tests.leadtrailspaces=2
+GetLeadSpaces=4
+GetTrailSpaces=5
+testname=1
